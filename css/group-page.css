@@ -79,23 +79,28 @@
     margin-bottom: 0;
 }
 
-h2 {
+h2, h3 {
     color: var(--accent-color);
-    margin-bottom: 1rem;
+    margin: 1.5rem 0 1rem;
     font-size: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
 }
 
-h2::after {
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1.8rem;
+}
+
+h2::after, h3::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 50px;
-    height: 3px;
+    height: 2px;
     background: var(--accent-color);
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 p {
