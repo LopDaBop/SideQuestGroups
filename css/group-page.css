@@ -1,0 +1,172 @@
+/* Group Page Specific Styles */
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.back-button:hover {
+    color: var(--accent-color);
+    background: rgba(58, 134, 255, 0.1);
+    border-color: rgba(58, 134, 255, 0.2);
+}
+
+.back-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.apply-button {
+    background: var(--accent-color);
+    color: white !important;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.apply-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(58, 134, 255, 0.4);
+    background: #2a7aff;
+}
+
+.group-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.content-wrapper {
+    background: var(--secondary-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+    margin-bottom: 2.5rem;
+}
+
+.info-section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 3px;
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.values-list {
+    list-style: none;
+    padding-left: 1.2rem;
+}
+
+.values-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.values-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .group-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .apply-button {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+    }
+    
+    .content-wrapper {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Group specific styles */
+.study-group .apply-button { --accent-color: #4cc9f0; }
+.business-group .apply-button { --accent-color: #4895ef; }
+.sports-group .apply-button { --accent-color: #4361ee; }
+
+/* Update accent colors based on group */
+.study-group h2::after { background-color: #4cc9f0; }
+.business-group h2::after { background-color: #4895ef; }
+.sports-group h2::after { background-color: #4361ee; }
+
+.study-group .values-list li::before { color: #4cc9f0; }
+.business-group .values-list li::before { color: #4895ef; }
+.sports-group .values-list li::before { color: #4361ee; }
