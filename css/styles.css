@@ -67,7 +67,16 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
+}
+
+.instruction-text {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    opacity: 0.8;
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
 }
 
 .group-button {
